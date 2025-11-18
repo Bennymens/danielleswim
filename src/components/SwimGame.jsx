@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./SwimGame.css";
 import UnderwaterScene from "./UnderwaterScene";
 
@@ -563,7 +564,7 @@ function SwimGame() {
 
     // UI background - smaller container
     const uiWidth = isMobile ? 140 : 160;
-    const uiHeight = isMobile ? 55 : 65;
+    const uiHeight = isMobile ? 45 : 55;
     const fontSize = isMobile ? 14 : 16;
 
     ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
@@ -595,7 +596,7 @@ function SwimGame() {
     ctx.fillStyle = "white";
     ctx.font = `bold ${fontSize}px Arial`;
     ctx.fillText(`Oxygen: ${Math.round(oxygen)}%`, 15, 22);
-    ctx.fillText(`Distance: ${distance.toFixed(0)}m`, 15, isMobile ? 50 : 55);
+    ctx.fillText(`Distance: ${distance.toFixed(0)}m`, 15, isMobile ? 42 : 47);
   };
 
   const checkCollision = (rect1, rect2) => {
@@ -705,6 +706,9 @@ function SwimGame() {
             <button onClick={startGame} className="start-button">
               Start Swimming! 🏊‍♀️
             </button>
+            <Link to="/" className="home-button-link">
+              <button className="home-button">🏠 Back to Homepage</button>
+            </Link>
             {highScore > 0 && (
               <div className="high-score">Best Distance: {highScore}m 🏆</div>
             )}
@@ -775,6 +779,9 @@ function SwimGame() {
               <button onClick={startGame} className="play-again-button">
                 Play Again 🔄
               </button>
+              <Link to="/" className="home-button-link">
+                <button className="home-button">🏠 Back to Homepage</button>
+              </Link>
             </div>
           </div>
         )}

@@ -73,7 +73,8 @@
 }
 
 .start-button,
-.play-again-button {
+.play-again-button,
+.home-button {
   background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
   color: white;
   border: none;
@@ -87,21 +88,22 @@
 }
 
 .start-button:hover,
-.play-again-button:hover {
+.play-again-button:hover,
+.home-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(6, 182, 212, 0.4);
 }
 
 .start-button:active,
-.play-again-button:active {
+.play-again-button:active,
+.home-button:active {
   transform: translateY(0);
 }
 
-.high-score {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #f59e0b;
-  font-weight: 600;
+.home-button-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
 }
 
 /* Animated Animals */
@@ -360,7 +362,8 @@
   }
 
   .start-button,
-  .play-again-button {
+  .play-again-button,
+  .home-button {
     width: 100%;
     padding: 15px;
     font-size: 1.1rem;
@@ -381,7 +384,8 @@
   }
 
   .menu-button,
-  .play-again-button {
+  .play-again-button,
+  .home-button {
     width: 100%;
   }
 
