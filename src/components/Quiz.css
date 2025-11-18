@@ -1,0 +1,274 @@
+.quiz {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.quiz-header {
+  text-align: center;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.quiz-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.progress-indicator {
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.question-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.option {
+  background: #f8f9ff;
+  border: 2px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.option:hover:not(:disabled) {
+  background: #ede9fe;
+  border-color: #8b5cf6;
+  transform: translateX(5px);
+}
+
+.option:disabled {
+  cursor: not-allowed;
+}
+
+.option.selected {
+  border-color: #8b5cf6;
+  background: #ede9fe;
+}
+
+.option.correct {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.option.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.explanation {
+  background: #f8f9ff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 4px solid #8b5cf6;
+}
+
+.result-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.result-indicator.correct {
+  color: #10b981;
+}
+
+.result-indicator.incorrect {
+  color: #ef4444;
+}
+
+.result-emoji {
+  font-size: 1.5rem;
+}
+
+.explanation-text {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.next-button {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.next-button:hover {
+  background: #7c3aed;
+  transform: translateX(3px);
+}
+
+.score-section {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 600px;
+  margin: 100px auto;
+}
+
+.score-emoji {
+  font-size: 6rem;
+  margin-bottom: 20px;
+}
+
+.score-section h1 {
+  color: #8b5cf6;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.score-display {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.score-number {
+  color: #10b981;
+}
+
+.score-total {
+  color: #999;
+}
+
+.score-message {
+  color: #666;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.score-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.retry-button,
+.home-link {
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.retry-button {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+}
+
+.retry-button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.home-link {
+  background: #e5e7eb;
+  color: #333;
+}
+
+.home-link:hover {
+  background: #d1d5db;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .quiz {
+    padding: 15px;
+  }
+
+  .quiz-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .question-section {
+    padding: 25px 20px;
+  }
+
+  .question {
+    font-size: 1.3rem;
+  }
+
+  .option {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .score-section {
+    padding: 40px 25px;
+    margin: 50px auto;
+  }
+
+  .score-emoji {
+    font-size: 4rem;
+  }
+
+  .score-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .score-display {
+    font-size: 3rem;
+  }
+
+  .score-actions {
+    flex-direction: column;
+  }
+
+  .retry-button,
+  .home-link {
+    width: 100%;
+  }
+}
